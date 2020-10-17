@@ -28,7 +28,7 @@ client.settings = new Enmap({
   cloneLevel: 'deep'
 });
 
-const defaultSettings = require('./default.json'); 				//load default configuration 
+const defaultSettings = require('./default.json'); 				//load default configuration
 const welcomeSettings = require('./welcome_default.json');		//load default welcome
 const user_settings = require('./user_config.json');
 
@@ -40,7 +40,7 @@ const invites = {};
 		const guildConf = client.settings.ensure(message.guild.id, defaultSettings);
 		const guildConfwelcome = client.settings.ensure(`${message.guild.id}-welcome`, welcomeSettings);
 		var prefix = guildConf.prefix;
-		
+
 ***********************************FOR INTERNAL COMMANDS******************************/
 
 
@@ -49,7 +49,7 @@ const invites = {};
 //*************************************************************************************
 
 
-client.once('ready', async () => { 
+client.once('ready', async () => {
 	await wait(1000);
 
 	  // Load all invites for all guilds and save them to the cache.
@@ -82,7 +82,7 @@ client.on('message', async message => {
 		var prefix = guildConf.prefix;
 	}
 
-	if (!message.content.startsWith(prefix) || message.author.bot){ 
+	if (!message.content.startsWith(prefix) || message.author.bot){
 
 		const blocked = profanity.filter(word => message.content.toLowerCase().includes(word));
 		if (blocked.length > 0 && message.author.id != '765950099368837130' && !message.author.hasPermission('ADMINISTRATOR')) {

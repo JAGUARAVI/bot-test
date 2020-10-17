@@ -1,0 +1,35 @@
+{
+
+  "name": "J2S Bot",
+
+  "description": "J2S Bot which serves J2S Server in Disocrd",
+
+  "version": "0.0.1",
+
+  "main": "bot.js",
+
+  "scripts": {
+
+    "start": "node bot.js"
+
+  },
+
+  "dependencies": {
+
+    "discord.js": "11.1.0",
+
+    "request": "2.81.0",
+
+    "discord.js-commando": "0.10.0",
+
+    "enmap": "5.8.0",
+
+    "sqlite3": "5.0.0",
+
+    "better-sqlite3": "7.1.1",
+
+    "parseboolean": "1.0.0"
+
+  }
+
+}
