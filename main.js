@@ -273,6 +273,7 @@ client.on('guildMemberAdd', member => {
 //*************************************************************************************
 
 
+
 client.on('guildMemberRemove',(member) => {
 	const guildConf = client.settings.ensure(member.guild.id, defaultSettings);
 	const leaver_config = client.settings.ensure(member.guild.id+"_"+member.user.id, user_settings);
