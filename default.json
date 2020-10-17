@@ -1,0 +1,7 @@
+{
+	"prefix": "!",
+	"moderation":"true",
+	"auto-moderation": "true",
+	"welcome": "true",
+	"invite_tracking":"true"
+}

@@ -1,0 +1,9 @@
+{
+	"title": ":tada: Congratulations on joining this very lucky server :tada:",
+	"message": ":tada: Have fun and enjoy {{user}} ! :tada:",
+	"image": "https://support.discord.com/hc/article_attachments/360013500032/nitro_gif.gif",
+	"advertisement" : "true",
+	"advertisement_title":"To get free rewards",
+	"advertisement_message":"[Click Here]({{link}})",
+	"advertisement_link":"https://discord.gg/YA6KAc6"
+}
