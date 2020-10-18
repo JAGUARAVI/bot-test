@@ -3,5 +3,7 @@
 	"moderation":"true",
 	"auto-moderation": "true",
 	"welcome": "true",
-	"invite_tracking":"true"
+	"invite_tracking":"true",
+	"join_channel": "joins",
+	"leave_channel": "leaves"
 }

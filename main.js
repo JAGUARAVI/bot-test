@@ -217,7 +217,7 @@ client.on('guildMemberAdd', member => {
 	    // Get the log channel (change to your liking)
 	    // A real basic message with the information we need.
 	    if(parseBool(guildConf.invite_tracking) == true){
-	    	const logChannel = member.guild.channels.cache.find(channel => channel.name === "join-logs");
+	    	const logChannel = member.guild.channels.cache.find(channel => channel.name == guildConf.join_channel);
 			logChannel.send(`${member.user.toString()} joined, invited by \*\*\*${inviter.username}\*\*\*.\n \*\*\*${inviter.username}\*\*\* has ${inviter_config.invites+inviter_config.bonus-inviter_config.leaves+1} invites`);
 		}
 	});
@@ -293,7 +293,7 @@ client.on('guildMemberRemove',(member) => {
 	client.settings.set(member.guild.id+"_"+inviter, user_invites, 'leaves');
 
 	if(parseBool(guildConf.invite_tracking) == true){
-	   	const logChannel = member.guild.channels.cache.find(channel => channel.name === "join-logs");
+	   	const logChannel = member.guild.channels.cache.find(channel => channel.name == guildConf.leave_channel);
 		logChannel.send(`${member.user.toString()} left, invited by \*\*\*${inviter_obj.username}\*\*\*.\n \*\*\*${inviter_obj.username}\*\*\* has ${inviter_config.invites+inviter_config.bonus-inviter_config.leaves-1} invites`);
 	}
 });
